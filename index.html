@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doll Revolution Exhibit – My T1D Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -26,16 +26,27 @@
     header h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 20px; }
     header p { font-size: 1.3rem; max-width: 700px; margin: auto; }
 
+    .donation-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffe6e1;
+      border-radius: 15px;
+      margin: 40px auto 20px auto;
+      max-width: 700px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
     section {
-      padding: 80px 20px;
+      padding: 50px 20px;
       max-width: 900px;
       margin: auto;
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.8s ease-out;
     }
-    section.visible { opacity: 1; transform: translateY(0); }
-
     section:nth-of-type(even) { background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 15px; margin-bottom: 40px; }
     h2 {
       color: #ff6f61;
@@ -73,19 +84,6 @@
       border: 0;
     }
 
-    .donation-section {
-      text-align: center;
-      padding: 60px 20px;
-      background: #ffe6e1;
-      border-radius: 15px;
-      margin: 40px auto;
-      max-width: 700px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
-    }
-
     .donation-button {
       display: inline-block;
       padding: 20px 40px;
@@ -119,19 +117,18 @@
 <body>
   <header>
     <h1>Doll Revolution Exhibit</h1>
-    <p>From Pre-Diagnosis Curiosity to TEDx Speaker – A Journey with Type 1 Diabetes, Dolls, and Resilience</p>
+    <p>From Pre‑Diagnosis Curiosity to TEDx Speaker – A Journey with Type 1 Diabetes, Dolls, and Resilience</p>
   </header>
 
-  <!-- Donation Section at the Top -->
   <div class="donation-section">
     <h2>Support the Doll Revolution</h2>
     <p>
-      You can support the Doll Revolution Exhibit and Breakthrough T1D by donating. The dropdown on the donation page is pre-selected for <strong>Doll Revolution — Srinika — Arcadis</strong>.
+      You can support the Doll Revolution Exhibit and Breakthrough T1D by donating. The dropdown on the donation page is pre‑selected for <strong>Doll Revolution — Srinika — Arcadis</strong>.
     </p>
-    <a class="donation-button" 
-       href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis" 
+    <a class="donation-button"
+       href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis"
        target="_blank">
-       Donate to Doll Revolution
+      Donate to Doll Revolution
     </a>
     <p>After clicking, ensure the dropdown shows <strong>Doll Revolution — Srinika — Arcadis</strong> before submitting.</p>
   </div>
@@ -139,7 +136,7 @@
   <section>
     <h2>My Story</h2>
     <p>
-      Before my Type 1 Diabetes diagnosis, dolls were more than toys—they were my companions, my storytellers, and my source of comfort. They helped me explore my imagination and navigate childhood challenges.
+      Before my Type 1 Diabetes diagnosis, dolls were more than toys—they were my companions, my storytellers, and my source of comfort. They helped me explore my imagination and navigate childhood challenges.
     </p>
     <p>
       Diagnosis was a turning point, filled with uncertainty and learning. Dolls remained my anchor, teaching resilience and creativity during tough times. Today, I share this story through the Doll Revolution Exhibit.
@@ -160,7 +157,7 @@
       I shared my T1D journey and the transformative power of dolls on the TEDx stage. Watch the full talk to explore my story of challenge, resilience, and creativity.
     </p>
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/kTqsj1FXs-U?start=1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/kTqsj1FXs‑U?start=1" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -177,9 +174,12 @@
   <section>
     <h2>Voice of T1D</h2>
     <p>
-      Read more about my vision for a future without Type 1 Diabetes and the impact of storytelling on the community in my Substack article.
+      Read more about my vision for a future without Type 1 Diabetes and the impact of storytelling on the community in my Substack article—and watch the companion video below.
     </p>
     <p><a href="https://voiceoft1d.substack.com/p/a-future-without-t1d" target="_blank">Read “A Future Without T1D”</a></p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/qWq6uYuwmw4" allowfullscreen></iframe>
+    </div>
   </section>
 
   <footer>
@@ -187,8 +187,7 @@
   </footer>
 
   <script>
-    // Fade-in sections on scroll
-    const sections = document.querySelectorAll("section, .donation-section");
+    const elements = document.querySelectorAll("section, .donation-section");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -197,7 +196,7 @@
       });
     }, { threshold: 0.2 });
 
-    sections.forEach(section => observer.observe(section));
+    elements.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
