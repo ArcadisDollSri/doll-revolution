@@ -92,4 +92,112 @@
       font-size: 1.3rem;
       color: white;
       background: #ff6f61;
-      b
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.2s;
+      margin: 20px 0;
+    }
+    .donation-button:hover {
+      background: #e55b50;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #f4f4f9;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    @media(max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Doll Revolution Exhibit</h1>
+    <p>From Pre-Diagnosis Curiosity to TEDx Speaker – A Journey with Type 1 Diabetes, Dolls, and Resilience</p>
+  </header>
+
+  <!-- Donation Section at the Top -->
+  <div class="donation-section">
+    <h2>Support the Doll Revolution</h2>
+    <p>
+      You can support the Doll Revolution Exhibit and Breakthrough T1D by donating. The dropdown on the donation page is pre-selected for <strong>Doll Revolution — Srinika — Arcadis</strong>.
+    </p>
+    <a class="donation-button" 
+       href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis" 
+       target="_blank">
+       Donate to Doll Revolution
+    </a>
+    <p>After clicking, ensure the dropdown shows <strong>Doll Revolution — Srinika — Arcadis</strong> before submitting.</p>
+  </div>
+
+  <section>
+    <h2>My Story</h2>
+    <p>
+      Before my Type 1 Diabetes diagnosis, dolls were more than toys—they were my companions, my storytellers, and my source of comfort. They helped me explore my imagination and navigate childhood challenges.
+    </p>
+    <p>
+      Diagnosis was a turning point, filled with uncertainty and learning. Dolls remained my anchor, teaching resilience and creativity during tough times. Today, I share this story through the Doll Revolution Exhibit.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Exhibit</h2>
+    <p>
+      The Doll Revolution Exhibit celebrates the role dolls played in my life. Each doll represents a chapter—from curiosity to coping, to resilience and inspiration. This exhibit shows how play, imagination, and personal storytelling can transform challenges into triumphs.
+    </p>
+    <img src="https://via.placeholder.com/800x450?text=Doll+Revolution+Exhibit" alt="Doll Revolution Exhibit" class="story-img">
+  </section>
+
+  <section>
+    <h2>TEDx Talk</h2>
+    <p>
+      I shared my T1D journey and the transformative power of dolls on the TEDx stage. Watch the full talk to explore my story of challenge, resilience, and creativity.
+    </p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/kTqsj1FXs-U?start=1" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>Animat1d Series</h2>
+    <p>
+      Animat1d is a creative series that brings my story to life with animated dolls. Follow the series to experience each chapter of my journey in a fun and engaging way.
+    </p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLySCCt5V6EwlEyKNLJf9vuSGGG66h-jKJ" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>Voice of T1D</h2>
+    <p>
+      Read more about my vision for a future without Type 1 Diabetes and the impact of storytelling on the community in my Substack article.
+    </p>
+    <p><a href="https://voiceoft1d.substack.com/p/a-future-without-t1d" target="_blank">Read “A Future Without T1D”</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Srinika – Doll Revolution Exhibit
+  </footer>
+
+  <script>
+    // Fade-in sections on scroll
+    const sections = document.querySelectorAll("section, .donation-section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
