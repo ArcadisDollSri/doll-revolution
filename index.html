@@ -79,12 +79,16 @@
   </style>
 </head>
 <body>
+  <nav class="menu-bar" style="background:#f36f6f; padding:10px; text-align:center;">
+    <button class="tab-btn" data-tab="home" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">Home</button>
+    <button class="tab-btn" data-tab="advocacy" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Advocacy</button>
+  </nav>
   <header class="donation-section">
     <h1>Doll Revolution Exhibit</h1>
     <p><a href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis" target="_blank">Donate to Support Doll Revolution</a></p>
   </header>
 
-  <main>
+  <main id="home" class="tab-content">
     <section class="story-section">
       <h2>My Journey Through T1D</h2>
       <p>The Doll Revolution Exhibit is a reflection of my journey with Type 1 Diabetes (T1D), from pre-diagnosis to diagnosis, and eventually to speaking on the TEDx stage. Each doll represents a moment in my story: challenges, resilience, and hope.</p>
@@ -109,8 +113,24 @@
     </section>
   </main>
 
+  <main id="advocacy" class="tab-content" style="display:none;">
+    <section>
+      <h2>Watch My TEDx Talk</h2>
+      <iframe src="https://www.youtube.com/embed/kTqsj1FXs-U" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Animat1d Series</h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLySCCt5V6EwlEyKNLJf9vuSGGG66h-jKJ&si=k1n-rINMuj-Qd65c" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Read About a Future Without T1D</h2>
+      <iframe src="https://www.youtube.com/embed/qWq6uYuwmw4" allowfullscreen></iframe>
+    </section>
+  </main>
+
   <script>
-    // Fade in sections when in viewport
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -120,6 +140,17 @@
     }, { threshold: 0.2 });
 
     document.querySelectorAll('section, .donation-section').forEach(el => observer.observe(el));
+  </script>
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        contents.forEach(c => c.style.display = 'none');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+      });
+    });
   </script>
 </body>
 </html>
