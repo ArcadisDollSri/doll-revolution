@@ -109,7 +109,6 @@
   <nav class="menu-bar">
 
     <!-- LEFT MENU BUTTONS -->
-        <!-- CENTER BANNER IMAGE -->
     <div class="menu-left">
         <img src="Doll_Revolution_Banner_Pic.jpg" class="top-banner">
     </div>
@@ -131,56 +130,67 @@
     </div>
   </nav>
 
-  <!-- ROW 2: STORY + ARCADIS -->
-  <div class="row-middle">
-    <section class="exhibit-intro">
-      <h2>The Story Behind the Exhibit</h2>
-      <p>Sri was an active and joyful toddler, a phase shown on the <b>ground floor</b> of the Doll House exhibit. </p>
-      <p>Her Type-1 Diabetes diagnosis brought sudden challenges, symbolized by the <b> darker middle floor </b>, where the dolls in her life became sources of comfort, stability, and courage.</p>
-      <p>They helped her navigate fear and grow into a confident advocate. Today, as depicted on the <b>third floor </b>, she shares her story through TEDx, BreakthroughT1D, and AnimaT1D.</p>
-      <p>The <b>top floor</b> shows all the characters standing strong, looking ahead with hope for a cure.</p>
+  <!-- ✅ HOME CONTENT WRAPPED IN TAB-CONTAINER -->
+  <main id="home" class="tab-content" style="display:block;">
+
+    <!-- ROW 2: STORY + ARCADIS -->
+    <div class="row-middle">
+      <section class="exhibit-intro">
+        <h2>The Story Behind the Exhibit</h2>
+        <p>Sri was an active and joyful toddler, a phase shown on the <b>ground floor</b> of the Doll House exhibit. </p>
+        <p>Her Type-1 Diabetes diagnosis brought sudden challenges, symbolized by the <b> darker middle floor </b>, where the dolls in her life became sources of comfort, stability, and courage.</p>
+        <p>They helped her navigate fear and grow into a confident advocate. Today, as depicted on the <b>third floor </b>, she shares her story through TEDx, BreakthroughT1D, and AnimaT1D.</p>
+        <p>The <b>top floor</b> shows all the characters standing strong, looking ahead with hope for a cure.</p>
+      </section>
+
+      <section class="arcadis-section">
+        <h2>Architects of the Exhibit</h2>
+        <p>The team at Arcadis Architecture firm in Seattle helped Elf Sri design and build this exhibit, bringing the Doll Revolution vision to life. A lot of volunteers and friends worked behind the scenes to prepare the decoration elements.</p>
+        <img src="arcadis6889.jpg"
+             style="width:100%; max-width:600px; border-radius:8px; display:block; margin:20px; float:left;">
+      </section>
+    </div>
+
+    <!-- ROW 3: PHOTO GALLERY -->
+    <div class="row-bottom">
+      <section class="photo-gallery">
+        <h2 style="text-align:center;">Photo Gallery</h2>
+
+        <div class="gallery-grid"
+             style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; margin-top:40px; text-align:center; font-size:14px;">
+
+          <div>
+            <img src="Doll_Rufus.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
+            <p>Rufus was created by Breakthrough T1D to help comforted children with T1D for over 25 years and features in an educational companion app.</p>
+          </div>
+
+          <div>
+            <img src="Doll_Sri.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
+            <p>This doll and a few variants represent Sri herself as her story is depicted throughout the exhibit.</p>
+          </div>
+
+          <div>
+            <img src="Doll_T1DBarbieish.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
+            <p>Modeled after Mattel's T1D Barbie, which ensures more kids can see themselves in the stories they imagine and the dolls they love.</p>
+          </div>
+
+          <div>
+            <img src="Doll_SouthIndian.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
+            <p>A South Indian doll that stood by Sri during her hardest moments, representing her cultural roots.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="thank-you" style="margin-top:40px; padding:20px; text-align:center;">
+      <h2>Thank You</h2>
+      <p>Heartfelt thanks to the <b>incredible Arcadis team, the dedicated BreakthroughT1D community, the wonderful Sheraton Seattle team, and all the amazing volunteers</b> whose support made this exhibit possible.</p>
     </section>
 
-    <section class="arcadis-section">
-      <h2>Architects of the Exhibit</h2>
-      <p>The team at Arcadis Architecture firm in Seattle helped Elf Sri design and build this exhibit, bringing the Doll Revolution vision to life. A lot of volunteers and friends worked behind the scenes to prepare the decoration elements.</p>
-      <img src="arcadis6889.jpg"
-           style="width:100%; max-width:600px; border-radius:8px; display:block; margin:20px; float:left;">
-    </section>
-  </div>
+  </main>
+  <!-- END HOME TAB -->
 
-  <!-- ROW 3: PHOTO GALLERY -->
-  <div class="row-bottom">
-    <section class="photo-gallery">
-      <h2 style="text-align:center;">Photo Gallery</h2>
-
-      <div class="gallery-grid"
-           style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; margin-top:40px; text-align:center; font-size:14px;">
-
-        <div>
-          <img src="Doll_Rufus.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-          <p>Rufus was created by Breakthrough T1D to help comforted children with T1D for over 25 years and features in an educational companion app.</p>
-        </div>
-
-        <div>
-          <img src="Doll_Sri.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-          <p>This doll and a few variants represent Sri herself as her story is depicted throughout the exhibit.</p>
-        </div>
-
-        <div>
-          <img src="Doll_T1DBarbieish.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-          <p>Modeled after Mattel's T1D Barbie, which ensures more kids can see themselves in the stories they imagine and the dolls they love.</p>
-        </div>
-
-        <div>
-          <img src="Doll_SouthIndian.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-          <p>A South Indian doll that stood by Sri during her hardest moments, representing her cultural roots.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- ADVOCACY TAB (unchanged) -->
+  <!-- ADVOCACY TAB -->
   <main id="advocacy" class="tab-content" style="display:none;">
     <section>
       <h2>Watch My TEDx Talk</h2>
@@ -197,11 +207,6 @@
       <iframe src="https://www.youtube.com/embed/qWq6uYuwmw4" allowfullscreen></iframe>
     </section>
   </main>
-
-  <section id="thank-you" style="margin-top:40px; padding:20px; text-align:center;">
-    <h2>Thank You</h2>
-    <p>Heartfelt thanks to the <b>incredible Arcadis team, the dedicated BreakthroughT1D community, the wonderful Sheraton Seattle team, and all the amazing volunteers</b> whose support made this exhibit possible.</p>
-  </section>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
@@ -229,10 +234,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
