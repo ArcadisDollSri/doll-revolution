@@ -1,147 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doll Revolution Exhibit</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fdf6f0;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #f36f6f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    header a:hover {
-      background: white;
-      color: #f36f6f;
-    }
-
-    main {
-      max-width: 1400px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h2, h3 {
-      color: #f36f6f;
-    }
-
-    section {
-      margin-bottom: 50px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    a.inline-link {
-      color: #f36f6f;
-      text-decoration: underline;
-    }
-  </style>
-</head>
 <body>
-  <nav class="menu-bar" style="background:#f36f6f; padding:10px; text-align:center;">
-    <button class="tab-btn" data-tab="home" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;"></button>
-    <button class="tab-btn" data-tab="advocacy" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Advocacy</button>
-  </nav>
-  <header class="donation-section">
-    <h1>Doll Revolution Exhibit</h1>
-    <p><a href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis" target="_blank">Donate to Support Doll Revolution</a></p>
-  </header>
 
-  <main id="home" class="tab-content" style="display:flex; gap:20px;">
-<section class="exhibit-intro">
-  <h2>The Story Behind the Exhibit</h2>
-  <p>
-Sri was an active and joyful toddler, a phase shown on the ground floor of the Doll House exhibit. Her Type-1 Diabetes diagnosis brought sudden challenges, symbolized by the darker middle floor, where the dolls in her life became sources of comfort, stability, and courage.
-  </p>
-  <p>
+  <!-- ROW 1: Banner -->
+  <div class="row-top">
+    <nav class="menu-bar" style="background:#f36f6f; padding:10px; text-align:center;">
+      <button class="tab-btn" data-tab="home" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;"></button>
+      <button class="tab-btn" data-tab="advocacy" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Advocacy</button>
+    </nav>
 
-They helped her navigate fear and grow into a confident advocate. Today, as depicted on the third floor, she shares her story through TEDx, BreakthroughT1D, and AnimaT1D.
-  </p>
-  <p>
-The top floor shows all the characters standing strong, looking ahead with hope for a cure.
-  </p>
+    <header class="donation-section">
+      <h1>Doll Revolution Exhibit</h1>
+      <p><a href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis" target="_blank">Donate to Support Doll Revolution</a></p>
+    </header>
+  </div>
 
-</section>
+  <!-- ROW 2: Story + Arcadis -->
+  <div class="row-middle">
+    <main id="home" class="tab-content" style="display:flex; gap:20px;">
+      <section class="exhibit-intro">
+        <h2>The Story Behind the Exhibit</h2>
+        <p>Sri was an active and joyful toddler, a phase shown on the ground floor of the Doll House exhibit. Her Type-1 Diabetes diagnosis brought sudden challenges, symbolized by the darker middle floor, where the dolls in her life became sources of comfort, stability, and courage.</p>
+        <p>They helped her navigate fear and grow into a confident advocate. Today, as depicted on the third floor, she shares her story through TEDx, BreakthroughT1D, and AnimaT1D.</p>
+        <p>The top floor shows all the characters standing strong, looking ahead with hope for a cure.</p>
+      </section>
 
-    <div style="flex:3;">
-    <section class="story-section">
+      <section class="arcadis-section" style="flex:3;">
+        <h2>Architects of the Exhibit</h2>
+        <p>The team at Arcadis Architecture firm in Seattle helped Elf Sri design and build this exhibit, bringing the Doll Revolution vision to life. A lot of volunteers and friends worked behind the scenes to prepare the decoration elements.</p>
+        <img src="arcadis6889.jpg" style="width:100%; max-width:600px; border-radius:8px; display:block; margin:20px auto;">
+      </section>
+    </main>
+  </div>
 
+  <!-- ROW 3: Photo Gallery -->
+  <div class="row-bottom">
     <section class="photo-gallery">
       <h2>Photo Gallery</h2>
       <div class="gallery-grid" style="display:grid; grid-template-columns:1fr; gap:20px; margin-bottom:40px;">
         <img src="Doll_Revolution_Banner_Pic.jpg" style="grid-column: span 1; width:100%; border-radius:8px;">
+
         <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; text-align:center; font-size:14px;">
           <div>
             <img src="Doll_Rufus.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-            <p>Rufus was created by Breakthrough T1D to help comforted children with T1D for over 25 years and features in an educational companion app.</p>
+            <p>Rufus was created by Breakthrough T1D...</p>
           </div>
           <div>
             <img src="Doll_Sri.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-            <p>This doll and a few variants represent Sri herself as her story is depicted throughout the exhibit.</p>
+            <p>This doll and a few variants represent Sri herself...</p>
           </div>
           <div>
             <img src="Doll_T1DBarbieish.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-            <p>Modeled after Mattel's T1D Barbie, which ensures more kids can see themselves in the stories they imagine and the dolls they love.</p>
+            <p>Modeled after Mattel's T1D Barbie...</p>
           </div>
           <div>
             <img src="Doll_SouthIndian.jpg" style="width:100%; border-radius:8px; object-fit:contain;">
-            <p>A South Indian doll that stood by Sri during her hardest moments, representing her cultural roots.</p>
+            <p>A South Indian doll that stood by Sri...</p>
           </div>
         </div>
       </div>
-      </div>
-
     </section>
+  </div>
 
-  <section class="arcadis-section">
-      <h2>Architects of the Exhibit</h2>
-      <p>The team at Arcadis Architecture firm in Seattle helped Elf Sri design and build this exhibit, bringing the Doll Revolution vision to life. A lot of volunteers and friends worked behind the scenes to prepare the decoration elements. </p>
-      <img src="arcadis6889.jpg" style="width:100%; max-width:600px; border-radius:8px; display:block; margin:20px auto;">
-  </section>
-
-  </main>
-
+  <!-- Advocacy main (unchanged) -->
   <main id="advocacy" class="tab-content" style="display:none;">
     <section>
       <h2>Watch My TEDx Talk</h2>
@@ -159,35 +78,9 @@ The top floor shows all the characters standing strong, looking ahead with hope 
     </section>
   </main>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+  <section id="thank-you" style="margin-top:40px; padding:20px; text-align:center;">
+    <h2>Thank You</h2>
+    <p>Heartfelt thanks to the incredible Arcadis team...</p>
+  </section>
 
-    document.querySelectorAll('section, .donation-section').forEach(el => observer.observe(el));
-  </script>
-  <script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        contents.forEach(c => c.style.display = 'none');
-        document.getElementById(tab.dataset.tab).style.display = 'block';
-      });
-    });
-  </script>
-
-<section id="thank-you" style="margin-top:40px; padding:20px; text-align:center;">
-<h2>Thank You</h2>
-<p>Heartfelt thanks to the incredible Arcadis team, the dedicated BreakthroughT1D community, the wonderful Sheraton Seattle team, and all the amazing volunteers whose support made this exhibit possible.</p>
-</section></body>
-</html>
-
-
-
-
+</body>
