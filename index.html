@@ -137,6 +137,33 @@
     max-width: 80%;
   }
 }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Make it 1 column on mobile */
+@media (max-width: 800px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep the iframe responsive */
+.video-grid iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.video-grid section {
+  text-align: center;
+}
+
 
   </style>
 </head>
@@ -158,11 +185,11 @@
 
     <!-- RIGHT DONATION BUTTON -->
     <div class="menu-right">
-      <div><p>Voting Suggestion:</p>
+      <div>
       <p>
         <a href="https://www2.breakthrought1d.org/site/Donation2?df_id=25654&25654.donation=form1&25654.gingerbread_village_voting=Doll+Revolution+%E2%80%94+Srinika+%E2%80%94+Arcadis"
      target="_blank">
-     Click here and select <b>Doll Revolution</b> as shown below
+     Click here to Vote for <b>Doll Revolution</b> as shown below
         </a>
       </p>
       </div>
@@ -237,25 +264,30 @@
 
   <!-- ADVOCACY TAB -->
   <main id="advocacy" class="tab-content" style="display:none;">
-    <section>
-      <h2>Fox13 Coverage of Gingerbread Village 2025 and Elf Sri</h2>
-      <iframe src="https://www.youtube.com/embed/Tx2gQhG1Bsk" allowfullscreen></iframe>
-    </section>
-    
-    <section>
-      <h2>Watch My TEDx Talk</h2>
-      <iframe src="https://www.youtube.com/embed/kTqsj1FXs-U" allowfullscreen></iframe>
-    </section>
+<div class="video-grid">
 
-    <section>
-      <h2>Animat1d Series</h2>
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PLySCCt5V6EwlEyKNLJf9vuSGGG66h-jKJ&si=k1n-rINMuj-Qd65c" allowfullscreen></iframe>
-    </section>
+  <section>
+    <h2>Fox13 Coverage of Gingerbread Village 2025 and Elf Sri</h2>
+    <iframe src="https://www.youtube.com/embed/Tx2gQhG1Bsk" allowfullscreen></iframe>
+  </section>
 
-    <section>
-      <h2>Read About a Future Without T1D</h2>
-      <iframe src="https://www.youtube.com/embed/qWq6uYuwmw4" allowfullscreen></iframe>
-    </section>
+  <section>
+    <h2>Watch My TEDx Talk</h2>
+    <iframe src="https://www.youtube.com/embed/kTqsj1FXs-U" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>Animat1d Series</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLySCCt5V6EwlEyKNLJf9vuSGGG66h-jKJ&si=k1n-rINMuj-Qd65c" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>Read About a Future Without T1D</h2>
+    <iframe src="https://www.youtube.com/embed/qWq6uYuwmw4" allowfullscreen></iframe>
+  </section>
+
+</div>
+
   </main>
 
   <script>
@@ -284,6 +316,7 @@
 
 </body>
 </html>
+
 
 
 
