@@ -100,6 +100,44 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
+    /* Make top bar responsive */
+.menu-bar {
+  flex-wrap: wrap;          /* allow items to break onto next line */
+}
+
+/* Prevent images from forcing overflow */
+.top-banner {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 700px) {
+  .menu-bar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu-left,
+  .menu-center,
+  .menu-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-right a {
+    font-size: 14px;
+    padding: 6px 10px;   /* shrink the big button */
+  }
+
+  .menu-right img {
+    max-width: 80%;
+  }
+}
+
   </style>
 </head>
 
@@ -237,6 +275,7 @@
 
 </body>
 </html>
+
 
 
 
