@@ -319,7 +319,14 @@ console.log("Script loaded!");
 function loadGallery() {
   const container = document.querySelector("#gallery");
   container.innerHTML = ""; // clear for repeated tab clicks
-
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("morepictures");
+    if (el) {
+      el.style.display = "none";
+    }
+  });
+  
   const images = [
   "gallery/3e6a0f2d-9552-4f83-9dd0-5a70e7ad56a5.jpg",
   "gallery/44ed62cd-92cd-4447-9d87-ab922a446e37.jpg",
@@ -329,6 +336,7 @@ function loadGallery() {
   images.forEach(src => {
     console.log("Loading:", src);
     const img = document.createElement("img");
+    
     img.src = src;
     container.appendChild(img);
   });
@@ -361,4 +369,5 @@ function loadGallery() {
 
 </body>
 </html>
+
 
