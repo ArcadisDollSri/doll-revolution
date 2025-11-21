@@ -163,7 +163,18 @@
 .video-grid section {
   text-align: center;
 }
-
+  #gallery img {
+    width: 200px;     /* adjust to any size you want */
+    height: auto;     /* keeps proper shape */
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
   </style>
 </head>
@@ -374,6 +385,7 @@ function loadGallery() {
 
 </body>
 </html>
+
 
 
 
