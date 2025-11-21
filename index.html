@@ -205,9 +205,9 @@
 
   <!-- ✅ HOME CONTENT WRAPPED IN TAB-CONTAINER -->
   <main id="home" class="tab-content" style="display:block;">
-    <p>FUN FACT: The visible portion of the exhibit is almost entirely edible content like gingerbread, gummies, fondant, peppermint and lots more!!!</p>
     <!-- ROW 2: STORY + ARCADIS -->
     <div class="row-middle">
+      <p>FUN FACT: The visible portion of the exhibit is almost entirely edible content like gingerbread, gummies, fondant, peppermint and lots more!!!</p>
       <section class="exhibit-intro">
         <h2>The Story Behind the Exhibit</h2>
         <p><b>PLEASE VISIT TO EXPERIENCE</b> </p>
@@ -327,10 +327,9 @@ function loadGallery() {
   container.innerHTML = ""; // clear for repeated tab clicks
 
   images.forEach(src => {
+    console.log("Loading:", src);
     const img = document.createElement("img");
     img.src = src;
-    img.style.width = "200px";
-    img.style.margin = "10px";
     container.appendChild(img);
   });
 }
@@ -362,6 +361,7 @@ function loadGallery() {
 
 </body>
 </html>
+
 
 
 
