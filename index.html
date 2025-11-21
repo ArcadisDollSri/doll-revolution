@@ -362,13 +362,19 @@ function loadGallery() {
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         contents.forEach(c => c.style.display = 'none');
-        document.getElementById(tab.dataset.tab).style.display = 'block';
+        const activeTab = document.getElementById(tab.dataset.tab);
+        activeTab.style.display = 'block';
+
+        if (tab.dataset.tab === "morepictures") {
+          loadGallery();
+        }
       });
     });
   </script>
 
 </body>
 </html>
+
 
 
 
