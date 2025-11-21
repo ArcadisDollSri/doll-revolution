@@ -179,8 +179,9 @@
     </div>
       
     <div class="menu-center">
-        <button class="tab-btn" data-tab="home" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Exhibit</button>
-        <button class="tab-btn" data-tab="advocacy" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Videos</button>
+        <button class="tab-btn" data-tab="home" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Exhibit (Main Page)</button>
+        <button class="tab-btn" data-tab="advocacy" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">My Videos (Don't miss)</button>
+        <button class="tab-btn" data-tab="morepicures" style="margin:0 10px; padding:10px 20px; border:none; background:white; color:#f36f6f; border-radius:6px; font-weight:bold; cursor:pointer;">More Pics (Don't miss)</button>
     </div>
 
     <!-- RIGHT DONATION BUTTON -->
@@ -302,6 +303,21 @@
 
   </main>
 
+    <!-- MORE PICTURES TAB -->
+  <main id="morepictures" class="tab-content" style="display:none;">
+const images = [
+  "gallery/3e6a0f2d-9552-4f83-9dd0-5a70e7ad56a5.jpg",
+  "gallery/44ed62cd-92cd-4447-9d87-ab922a446e37.jpg",
+  "gallery/47c3fcd9-81dc-42ea-a6a5-a34d8a9b2ac4.jpg"
+];
+
+images.forEach(src => {
+  const img = document.createElement("img");
+  img.src = src;
+  document.querySelector("#gallery").appendChild(img);
+});
+    
+  </main>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -328,6 +344,7 @@
 
 </body>
 </html>
+
 
 
 
