@@ -303,9 +303,8 @@
     </section>
 
     
-    <div id="visitor-count" style="font-weight:bold; padding: 5px 0; text-align:center;">
-      Loading visitor count...
-    </div>
+    <img src="https://hits.sh/arcadisdollsri.github.io/doll-revolution.svg?style=flat-square" alt="Visitor Count"/>
+
 
   </main>
   <!-- END HOME TAB -->
@@ -424,22 +423,11 @@ function loadGallery() {
       });
     });
   </script>
-  <script>
-fetch("https://api.countapi.xyz/hit/doll-revolution-visitors/visits")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visitor-count").innerText =
-      "Total Visitors: " + data.value;
-  })
-  .catch(() => {
-    document.getElementById("visitor-count").innerText =
-      "Visitor counter unavailable";
-  });
-</script>
 
 
 </body>
 </html>
+
 
 
 
